@@ -26,7 +26,7 @@ namespace McMd
    *
    * \ingroup McMd_McMove_Module
    */
-   class UmbrellaSamplingSemiGrandMove : public SystemMove 
+   class UmbrellaSamplingSemigrandMove : public SystemMove 
    {
    
    public:
@@ -34,7 +34,7 @@ namespace McMd
       /**
       * Constructor. 
       */
-      UmbrellaSamplingSemiGrandMove(McSystem& system);
+      UmbrellaSamplingSemigrandMove(McSystem& system);
    
       /**
       * Read species to which displacement is applied.

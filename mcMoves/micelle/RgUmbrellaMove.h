@@ -12,7 +12,7 @@
 #include <util/containers/DArray.h>   // member template
 #include <util/space/Vector.h>        // member template parameter
 #include <mcMd/mdIntegrators/NphIntegrator.h>         
-#include <mcMd/mcMoves/micelle/ClusterIdentifierMC.h>
+#include <mcMd/modules/micelle/mcMoves/micelle/ClusterIdentifierMC.h>
 
 namespace McMd
 {

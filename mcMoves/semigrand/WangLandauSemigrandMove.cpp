@@ -5,7 +5,7 @@
 * Distributed under the terms of the GNU General Public License.
 */
 
-#include "WangLandauSemiGrandMove.h"
+#include "WangLandauSemigrandMove.h"
 #include <mcMd/simulation/Simulation.h>
 #include <mcMd/mcSimulation/McSystem.h>
 #ifndef INTER_NOPAIR
@@ -24,7 +24,7 @@ namespace McMd
    /* 
    * Constructor
    */
-   WangLandauSemiGrandMove::WangLandauSemiGrandMove(McSystem& system) : 
+   WangLandauSemigrandMove::WangLandauSemigrandMove(McSystem& system) : 
       SystemMove(system),
       speciesId_(-1),
       mutatorPtr_(0),
@@ -36,7 +36,7 @@ namespace McMd
    /* 
    * Read parameter speciesId.
    */
-   void WangLandauSemiGrandMove::readParameters(std::istream& in) 
+   void WangLandauSemigrandMove::readParameters(std::istream& in) 
    {
      // Read parameters
      readProbability(in);
@@ -84,7 +84,7 @@ namespace McMd
    /*
    * Load state from an archive.
    */
-   void WangLandauSemiGrandMove::loadParameters(Serializable::IArchive& ar)
+   void WangLandauSemigrandMove::loadParameters(Serializable::IArchive& ar)
    {  
      McMove::loadParameters(ar);
      loadParameter<int>(ar, "speciesId", speciesId_);
@@ -105,7 +105,7 @@ namespace McMd
    /*
    * Save state to an archive.
    */
-   void WangLandauSemiGrandMove::save(Serializable::OArchive& ar)
+   void WangLandauSemigrandMove::save(Serializable::OArchive& ar)
    {
      McMove::save(ar);
      ar << speciesId_; 
@@ -119,7 +119,7 @@ namespace McMd
      ar << stateCount_;
    }
    // Determine if it is time to adapt the step size and if so do such
-   void WangLandauSemiGrandMove::stepAdapt()
+   void WangLandauSemigrandMove::stepAdapt()
    { 
      // Determine if the histogram is sufficiently flat
      bool flat = true;
@@ -146,7 +146,7 @@ namespace McMd
      }
    }
 
-   Molecule& WangLandauSemiGrandMove::randomSGMolecule(int speciesId, int nSubType, int flipType, bool atBoundary)
+   Molecule& WangLandauSemigrandMove::randomSGMolecule(int speciesId, int nSubType, int flipType, bool atBoundary)
    {
       if (!atBoundary) {
         return system().randomMolecule(speciesId_);
@@ -176,7 +176,7 @@ namespace McMd
    /* 
    * Generate, attempt and accept or reject a Monte Carlo move.
    */
-   bool WangLandauSemiGrandMove::move() 
+   bool WangLandauSemigrandMove::move() 
    {  
      stepCount_=stepCount_+1;
      incrementNAttempt();
@@ -250,7 +250,7 @@ namespace McMd
      return accept;
    }
  
-   void WangLandauSemiGrandMove::output()
+   void WangLandauSemigrandMove::output()
    {    
      outputFile_.close();
      std::string fileName = outputFileName_; 

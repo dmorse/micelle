@@ -5,7 +5,7 @@
 * Distributed under the terms of the GNU General Public License.
 */
 
-#include "UmbrellaSamplingSemiGrandMove.h"
+#include "UmbrellaSamplingSemigrandMove.h"
 #include <mcMd/simulation/Simulation.h>
 #include <mcMd/mcSimulation/McSystem.h>
 #ifndef INTER_NOPAIR
@@ -23,7 +23,7 @@ namespace McMd
    /* 
    * Constructor
    */
-   UmbrellaSamplingSemiGrandMove::UmbrellaSamplingSemiGrandMove(McSystem& system) : 
+   UmbrellaSamplingSemigrandMove::UmbrellaSamplingSemigrandMove(McSystem& system) : 
       SystemMove(system),
       speciesId_(-1),
       mutatorPtr_(0),
@@ -35,7 +35,7 @@ namespace McMd
    /* 
    * Read parameter speciesId.
    */
-   void UmbrellaSamplingSemiGrandMove::readParameters(std::istream& in) 
+   void UmbrellaSamplingSemigrandMove::readParameters(std::istream& in) 
    {
       // Read parameters
       readProbability(in);
@@ -69,7 +69,7 @@ namespace McMd
    /*
    * Load state from an archive.
    */
-   void UmbrellaSamplingSemiGrandMove::loadParameters(Serializable::IArchive& ar)
+   void UmbrellaSamplingSemigrandMove::loadParameters(Serializable::IArchive& ar)
    {  
       McMove::loadParameters(ar);
       loadParameter<int>(ar, "speciesId", speciesId_);
@@ -88,7 +88,7 @@ namespace McMd
    /*
    * Save state to an archive.
    */
-   void UmbrellaSamplingSemiGrandMove::save(Serializable::OArchive& ar)
+   void UmbrellaSamplingSemigrandMove::save(Serializable::OArchive& ar)
    {
       McMove::save(ar);
       ar & speciesId_;  
@@ -98,7 +98,7 @@ namespace McMd
    }
      
 
-   Molecule& UmbrellaSamplingSemiGrandMove::randomSGMolecule(int speciesId, int nSubType, int flipType, bool atBoundary)
+   Molecule& UmbrellaSamplingSemigrandMove::randomSGMolecule(int speciesId, int nSubType, int flipType, bool atBoundary)
    {
       if (!atBoundary) {
         return system().randomMolecule(speciesId_);
@@ -128,7 +128,7 @@ namespace McMd
    /* 
    * Generate, attempt and accept or reject a Monte Carlo move.
    */
-   bool UmbrellaSamplingSemiGrandMove::move() 
+   bool UmbrellaSamplingSemigrandMove::move() 
    { 
       incrementNAttempt();
       double comboPrefactor = 1.0;
@@ -193,7 +193,7 @@ namespace McMd
       return accept;
    }
  
-   void UmbrellaSamplingSemiGrandMove::output()
+   void UmbrellaSamplingSemigrandMove::output()
    {    outputFile_.close();
         std::string fileName = outputFileName_; 
         std::ofstream outputFile;

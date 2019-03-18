@@ -12,7 +12,7 @@
 #include <util/containers/DArray.h>
 #include <util/containers/Pair.h>
 #include <mcMd/chemistry/Molecule.h> //testing
-#include <mcMd/mcMoves/micelle/ClusterIdentifierMC.h>
+#include <mcMd/modules/micelle/mcMoves/micelle/ClusterIdentifierMC.h>
 #include <util/accumulators/IntDistribution.h> 
 
 namespace McMd

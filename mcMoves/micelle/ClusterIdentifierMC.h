@@ -8,8 +8,8 @@
 * Distributed under the terms of the GNU General Public License.
 */
 
-#include <mcMd/mcMoves/micelle/Cluster.h>       // member template argument
-#include <mcMd/mcMoves/micelle/ClusterLink.h>   // member template argument
+#include <mcMd/modules/micelle/mcMoves/micelle/Cluster.h>       // member template argument
+#include <mcMd/modules/micelle/mcMoves/micelle/ClusterLink.h>   // member template argument
 #include <mcMd/neighbor/CellList.h>              // member
 #include <simp/boundary/Boundary.h>              // argument (typedef)
 #include <util/containers/DArray.h>              // member template

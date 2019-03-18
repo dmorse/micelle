@@ -7,7 +7,7 @@
 // Include headers for user defined McMoves
 #include "micelle/SingleMicelleHybridMove.h"
 #include "micelle/SingleMicelleUmbrellaSamplingMove.h"
-#include "micelle/RgUmbrellaSamplingMove.h"
+#include "micelle/RgUmbrellaMove.h"
 
 #include "semigrand/WangLandauSemigrandMove.h"
 #include "semigrand/UmbrellaSamplingSemigrandMove.h"
@@ -40,8 +40,8 @@ namespace McMd
       if (className == "SingleMicelleUmbrellaSamplingMove") {
          ptr = new SingleMicelleUmbrellaSamplingMove(system());
       } else
-      if (className == "RgUmbrellaSamplingMove") {
-        ptr = new RgUmbrellaSamplingMove(system());
+      if (className == "RgUmbrellaMove") {
+        ptr = new RgUmbrellaMove(system());
       } else          
       if (className == "WangLandauSemigrandMove") {
         ptr = new WangLandauSemigrandMove(system());

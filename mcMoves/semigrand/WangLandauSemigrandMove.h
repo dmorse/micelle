@@ -26,7 +26,7 @@ namespace McMd
    *
    * \ingroup McMd_McMove_Module
    */
-   class WangLandauSemiGrandMove : public SystemMove 
+   class WangLandauSemigrandMove : public SystemMove 
    {
    
    public:
@@ -34,7 +34,7 @@ namespace McMd
       /**
       * Constructor. 
       */
-      WangLandauSemiGrandMove(McSystem& system);
+      WangLandauSemigrandMove(McSystem& system);
    
       /**
       * Read species to which displacement is applied.
