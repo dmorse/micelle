@@ -1,12 +1,14 @@
-mcMd_modules_sliplink_mcMoves_=\
-  mcMd/modules/sliplink/mcMoves/SliplinkerAll.cpp \
-  mcMd/modules/sliplink/mcMoves/SliplinkerEnd.cpp \
-  mcMd/modules/sliplink/mcMoves/SliplinkMove.cpp \
-  mcMd/modules/sliplink/mcMoves/GcSliplinkMove.cpp \
-  mcMd/modules/sliplink/mcMoves/SliplinkMcMoveFactory.cpp 
+mcMd_modules_micelle_analyzers_= \
+    mcMd/modules/micelle/analyzers/ClusterHistogramInd.cpp \
+    mcMd/modules/micelle/analyzers/ClusterHistogramSimple.cpp \
+    mcMd/modules/micelle/analyzers/ClusterIdentifierSG.cpp \
+    mcMd/modules/micelle/analyzers/InterfacialLoading.cpp \
+    mcMd/modules/micelle/analyzers/MicelleFlux.cpp \
+    mcMd/modules/micelle/analyzers/MicelleFluxDroplet.cpp \
+    mcMd/modules/micelle/analyzers/RadialComposition.cpp
 
-mcMd_modules_sliplink_mcMoves_SRCS=\
-  $(addprefix $(SRC_DIR)/, $(mcMd_modules_sliplink_mcMoves_))
-mcMd_modules_sliplink_mcMoves_OBJS=\
-  $(addprefix $(BLD_DIR)/, $(mcMd_modules_sliplink_mcMoves_:.cpp=.o))
+mcMd_modules_micelle_analyzers_SRCS=\
+  $(addprefix $(SRC_DIR)/, $(mcMd_modules_micelle_analyzers_))
+mcMd_modules_sliplink_analyzers_OBJS=\
+  $(addprefix $(BLD_DIR)/, $(mcMd_modules_micelle_analyzers_:.cpp=.o))
 

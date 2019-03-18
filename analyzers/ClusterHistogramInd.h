@@ -10,7 +10,7 @@
 
 #include <mcMd/analyzers/SystemAnalyzer.h>            // base class template
 #include <mcMd/simulation/System.h>                   // base class templ param
-#include <mcMd/analyzers/system/ClusterIdentifierSG.h>  // member
+#include <mcMd/modules/micelle/analyzers/ClusterIdentifierSG.h>  // member
 #include <simp/boundary/Boundary.h>                   // member (typedef)
 #include <util/accumulators/IntDistribution.h>        // member
 

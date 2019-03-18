@@ -3,7 +3,12 @@
 #include <mcMd/mcSimulation/McSystem.h>  
 
 // Include headers for any user defined Analyzers for MC simulations
-#include "G1MSD.h"
+#include "ClusterHistogramInd.h"
+#include "ClusterHistogramSimple.h"
+#include "InterfacialLoading.h"
+#include "MicelleFlux.h"
+#include "MicelleFluxDroplet.h"
+#include "RadialComposition.h"
 
 namespace McMd
 {
@@ -18,39 +23,24 @@ namespace McMd
       ptr = trySubfactories(className);
       if (ptr) return ptr;
 
-      if (className == "G1MSD") {
-         ptr = new G1MSD(system());
+      if (className == "ClusterHistogramInd") {
+         ptr = new ClusterHistogramInd(system());
       }             
-      else if (className == "EndtoEnd") {
-         ptr = new EndtoEnd(system());
+      else if (className == "ClusterHistogramSimple") {
+         ptr = new ClusterHistogramSimple(system());
       }
-      else if (className == "EndtoEndXYZ") {
-         ptr = new EndtoEndXYZ(system());
+      else if (className == "InterfacialLoading") {
+         ptr = new InterfacialLoading(system());
       }      
-      else if (className == "LinkLengthDist") {
-         ptr = new LinkLengthDist(system());
+      else if (className == "MicelleFlux") {
+         ptr = new MicelleFlux(system());
       }  
-      else if (className == "LinkLifeTime") {
-         ptr = new LinkLifeTime(system());
+      else if (className == "MicelleFluxDroplet") {
+         ptr = new MicelleFluxDroplet(system());
       }         
-      else if (className == "SSChainDist") {
-         ptr = new SSChainDist(system());
+      else if (className == "RadialComposition") {
+         ptr = new RadialComposition(system());
       }
-      else if (className == "VelProf") {
-         ptr = new VelProf(system());
-      }         
-      else if (className == "NLinkAverage") {
-         ptr = new NLinkAverage(system());
-      }
-      else if (className == "InterIntraLink") {
-         ptr = new InterIntraLink(system());
-      } 
-      else if (className == "LinkLTPos") {
-         ptr = new LinkLTPos(system());
-      }    
-      else if (className == "LinkMSD") {
-         ptr = new LinkMSD(system());
-      }        
 
       #if 0
       // If not a user-defined class, try the standard factory 
