@@ -10,24 +10,17 @@ BLD_DIR_REL=../../../..
 # Include master makefiles
 
 include $(BLD_DIR_REL)/config.mk
-include $(BLD_DIR)/util/config.mk
-include $(BLD_DIR)/simp/config.mk
-include $(BLD_DIR)/mcMd/config.mk
 include $(SRC_DIR)/mcMd/patterns.mk
-#include $(BLD_DIR)/util/sources.mk
-#include $(BLD_DIR)/simp/sources.mk
-#include $(BLD_DIR)/mcMd/sources.mk
-include $(SRC_DIR)/mcMd/modules/sliplink/mcMoves/sources.mk
 
 #-------------------------------------------------------------------
 # Major targets
 
-all: $(mcMd_modules_sliplink_mcMoves_OBJS)
+all: $(mcMd_modules_micelle_analyzers_OBJS)
 
 clean:
-	-rm -f $(mcMd_modules_sliplink_mcMoves_OBJS)
-	-rm -f $(mcMd_modules_sliplink_mcMoves_OBJS:.o=.d)
+	-rm -f $(mcMd_modules_micelle_analyzers_OBJS)
+	-rm -f $(mcMd_modules_micelle_analyzers_OBJS:.o=.d)
 
--include $(mcMd_modules_sliplink_mcMoves_OBJS:.o=.d)
+-include $(mcMd_modules_micelle_analyzers_OBJS:.o=.d)
 
 #-------------------------------------------------------------------

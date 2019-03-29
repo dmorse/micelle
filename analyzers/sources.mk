@@ -9,6 +9,7 @@ mcMd_modules_micelle_analyzers_= \
 
 mcMd_modules_micelle_analyzers_SRCS=\
   $(addprefix $(SRC_DIR)/, $(mcMd_modules_micelle_analyzers_))
-mcMd_modules_sliplink_analyzers_OBJS=\
+
+mcMd_modules_micelle_analyzers_OBJS=\
   $(addprefix $(BLD_DIR)/, $(mcMd_modules_micelle_analyzers_:.cpp=.o))
 

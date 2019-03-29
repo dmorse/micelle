@@ -1,6 +1,3 @@
-#ifndef MCMD_RADIAL_COMPOSITION_CPP
-#define MCMD_RADIAL_COMPOSTION_CPP
-
 /*
 * Simpatico - Simulation Package for Polymeric and Molecular Liquids
 *
@@ -290,4 +287,3 @@ namespace McMd
    }
 
 }
-#endif 

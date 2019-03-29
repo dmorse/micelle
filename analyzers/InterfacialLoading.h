@@ -8,8 +8,8 @@
 * Distributed under the terms of the GNU General Public License.
 */
 
-#include <mcMd/analyzers/SystemAnalyzer.h>      // base class template
-#include <mcMd/simulation/System.h>                 // base class template parameter
+#include <mcMd/analyzers/base/SystemAnalyzer.h>  // base class template
+#include <mcMd/simulation/System.h>              // class template parameter
 #include <util/accumulators/IntDistribution.h>
 #include <mcMd/neighbor/CellList.h>
 

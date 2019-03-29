@@ -8,7 +8,7 @@
 * Distributed under the terms of the GNU General Public License.
 */
 
-#include <mcMd/analyzers/SystemAnalyzer.h>            // base class template
+#include <mcMd/analyzers/base/SystemAnalyzer.h>       // base class template
 #include <mcMd/simulation/System.h>                   // base class templ param
 #include <mcMd/modules/micelle/analyzers/ClusterIdentifierSG.h>  // member
 #include <simp/boundary/Boundary.h>                   // member (typedef)
