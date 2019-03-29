@@ -1,0 +1,19 @@
+Classes for simulating micelles using the simpatico package.
+
+The code in this repository is intended to be used as an add-on
+source code module within the simpatico molecular simulation 
+package. To install and compile this:
+
+1) Clone the repository as a subdirectory of the src/mcMd/modules
+directory of the simpatico package (http://github.com/dmorse/simpatico)
+
+2) Change the name of the directory containing this module to micelle/.
+
+3) Modify the makefile fragent src/mcMd/sources.mk to include the file
+src/mcMd/modules/micelle/sources.mk and add a line adding the variable
+$(mcMd_modules_micelle_) to $(mcMd_modules_), as described in the file
+src/mcMd/modules/README.
+
+4) Modify the mcSim or mdSim main program by adding a line that creates
+an instance of McMicelleModule or MdMicelleModule, as appropriate.
+
