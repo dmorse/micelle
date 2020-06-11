@@ -9,8 +9,8 @@
 #include "micelle/SingleMicelleUmbrellaSamplingMove.h"
 #include "micelle/RgUmbrellaMove.h"
 
-#include "semigrand/WangLandauSemigrandMove.h"
-#include "semigrand/UmbrellaSamplingSemigrandMove.h"
+#include "semigrand/WangLandauSemiGrandMove.h"
+#include "semigrand/UmbrellaSamplingSemiGrandMove.h"
 
 namespace McMd
 {
@@ -43,11 +43,11 @@ namespace McMd
       if (className == "RgUmbrellaMove") {
         ptr = new RgUmbrellaMove(system());
       } else          
-      if (className == "WangLandauSemigrandMove") {
-        ptr = new WangLandauSemigrandMove(system());
+      if (className == "WangLandauSemiGrandMove") {
+        ptr = new WangLandauSemiGrandMove(system());
       } else          
-      if (className == "UmbrellaSamplingSemigrandMove") {
-        ptr = new UmbrellaSamplingSemigrandMove(system());
+      if (className == "UmbrellaSamplingSemiGrandMove") {
+        ptr = new UmbrellaSamplingSemiGrandMove(system());
       }          
       
       #if 0     
