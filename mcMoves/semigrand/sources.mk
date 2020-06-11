@@ -2,8 +2,8 @@ mcMd_modules_micelle_mcMoves_semigrand_=
 
 ifdef SIMP_BOND
 mcMd_modules_micelle_mcMoves_semigrand_+= \
-    mcMd/modules/micelle/mcMoves/semigrand/UmbrellaSamplingSemigrandMove.cpp \
-    mcMd/modules/micelle/mcMoves/semigrand/WangLandauSemigrandMove.cpp
+    mcMd/modules/micelle/mcMoves/semigrand/UmbrellaSamplingSemiGrandMove.cpp \
+    mcMd/modules/micelle/mcMoves/semigrand/WangLandauSemiGrandMove.cpp
 endif
 
 mcMd_modules_micelle_mcMoves_semigrand_SRCS=\
