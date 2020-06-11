@@ -49,11 +49,12 @@ namespace McMd
       ~ClusterIdentifierSG();
    
       /** 
-      * Clear accumulator.
+      * Initialize state and allocate required memory (call once).
       *
       * \param speciesId index of species in clusters
       * \param atomTypeId typeId of atoms in micelle core
       * \param cutoff pair distance cutoff
+      * \param subType index of SG molecule subtype to include in clusters
       */
       virtual 
       void initialize(int speciesId, int atomTypeId, double cutoff, int subType);
@@ -119,7 +120,8 @@ namespace McMd
 
       /// Cutoff distance for touching cores
       double cutoff_;
- 
+
+      /// Subtype index for molecules that can form a cluster. 
       int subTypeId_;
 
       // Private functions
